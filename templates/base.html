@@ -16,7 +16,6 @@
   </head>
 
   <body>
-    {% block content %}
     <header class="container-fluid fixed-top">
 
     </header>
@@ -24,6 +23,11 @@
     {% if messages %}
     <div class="message-container"></div>
     {% endif %}
+
+    {% block page_header %}
+    {% endblock %}
+
+    {% block content %}
     {% endblock %}
 
     {% block corejs %}
